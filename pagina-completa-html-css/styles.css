@@ -1,0 +1,32 @@
+* { box-sizing: border-box; }
+
+body 
+{ 
+    font-size: 'Roboto', sans-serif;
+    margin: 0; 
+}
+
+h1 { font-size: 3.5em; }
+h2 { font-size: 2.7em; }
+h3 { font-size: 2em; }
+p { font-size: 1.25em; }
+li { font-size: 1.25em; }
+
+ul { list-style: none;}
+
+button
+{
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #ff802c;
+    color: white;
+}
+
+button:hover
+{
+    background-color: #ff6600;
+}
