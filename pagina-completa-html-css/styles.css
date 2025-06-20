@@ -213,3 +213,28 @@ footer .container
     justify-content: center;
     align-items: flex-end;
 }
+
+/* QUERIES */
+
+@media (min-width: 720px)
+{
+    header
+    {
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container
+    {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav
+    {
+        padding-right: 20px;
+        flex-direction: row;
+        padding-bottom: 0px;
+        gap: 30px;
+    }
+}
