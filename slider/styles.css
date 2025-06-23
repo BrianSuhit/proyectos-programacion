@@ -40,7 +40,7 @@ body
     opacity: 0;
     pointer-events: none;
     display: grid;
-    background-color: #f2f2f2;
+    background-color: ghostwhite;
     grid-template-columns: 1fr max-content;
     align-items: center;
     transition: opacity 1.5s;
@@ -50,4 +50,104 @@ body
 {
     opacity: 1;
     pointer-events: unset;
+}
+
+.slider__text
+{
+    max-width: 600px;
+}
+
+.subtitle
+{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.slider__review
+{
+    /* font-weight: 300; */
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+.slider__img
+{
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.slider__arrow
+{
+    cursor: pointer;
+    width: 90%;
+}
+
+.slider__arrow:nth-of-type(2)
+{
+    justify-self: end;
+}
+
+
+@media (max-width: 768px) 
+{
+  /* General adjustments for smaller screens */
+    .slider 
+    {
+    padding: 20px 0; /* Less padding on top/bottom */
+    }
+
+    .slider__container 
+    {
+    grid-template-columns: 1fr; /* Stack elements vertically */
+    grid-template-rows: auto 1fr auto; /* Control row sizes */
+    gap: 0.5em; /* Reduce gap */
+    }
+
+    .slider__body {
+        grid-column: 1/2; /* Occupy full width */
+        grid-row: 2/3; /* Place in the middle row */
+        grid-template-columns: 1fr; /* Stack text and image vertically within the body */
+        text-align: center; /* Center align content */
+    }
+
+    .slider__img {
+        width: 150px; /* Smaller image on mobile */
+        height: 150px; /* Smaller image on mobile */
+        margin-bottom: 20px; /* Add space below image */
+    }
+
+    .subtitle {
+        font-size: 1.8rem; /* Smaller title font size */
+        margin-bottom: 15px;
+    }
+
+    .slider__review {
+        font-size: 16px; /* Smaller review text */
+        padding: 0 15px; /* Add some horizontal padding to the text */
+    }
+
+    .slider__arrow {
+        width: 40px; /* Make arrows smaller */
+        height: 40px;
+        align-self: center; /* Vertically center arrows */
+    }
+
+    /* Position arrows at the top/bottom or left/right */
+    .slider__arrow:nth-of-type(1) {
+        grid-column: 1/2; /* Place first arrow in the first column */
+        grid-row: 1/2; /* Place first arrow in the first row */
+        justify-self: start; /* Align to the start (left) */
+        align-self: center; /* Center vertically */
+    }
+
+    .slider__arrow:nth-of-type(2) {
+        grid-column: 1/2; /* Place second arrow in the first column */
+        grid-row: 1/2; /* Place second arrow in the first row */
+        justify-self: end; /* Align to the end (right) */
+        align-self: center; /* Center vertically */
+    }
 }
